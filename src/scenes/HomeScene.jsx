@@ -32,7 +32,7 @@ const HomeScene = () => {
         <SpinningBox
           position={[0, 1, 0]}
           color={"pink"}
-          size={[3, 2, 1]}
+          size={[2, 2, 2]}
           speed={1}
         />
         <SpinningBox position={[-2, 1, -5]} speed={2} />
