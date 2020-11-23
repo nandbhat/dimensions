@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  position: fixed;
+  background-color: #f1f4f8;
+}
