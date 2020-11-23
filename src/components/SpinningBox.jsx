@@ -1,7 +1,13 @@
 import React, { useRef } from "react";
 import { useFrame } from "react-three-fiber";
+import { MeshWobbleMaterial } from "drei";
 
-const SpinningBox = ({ position, size = [1, 1, 1], color = "grey" }) => {
+const SpinningBox = ({
+  position,
+  size = [1, 1, 1],
+  color = "grey",
+  speed = 1,
+}) => {
   const mesh = useRef(null);
 
   useFrame(() => {
@@ -11,7 +17,12 @@ const SpinningBox = ({ position, size = [1, 1, 1], color = "grey" }) => {
   return (
     <mesh ref={mesh} position={position} castShadow>
       <boxBufferGeometry attach="geometry" args={size} />
-      <meshStandardMaterial attach="material" color={color} />
+      <MeshWobbleMaterial
+        attach="material"
+        color={color}
+        speed={speed}
+        factor={0.6}
+      />
     </mesh>
   );
 };
